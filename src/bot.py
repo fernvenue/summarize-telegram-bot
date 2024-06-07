@@ -69,18 +69,18 @@ async def handleStartMessage(update, context):
     if userId in ADMIN_USER_IDS:
         await update.message.reply_text("Hey boss, I'm ready to serve you :)")
     elif userId in ALLOWED_TELEGRAM_USER_IDS:
-        await update.message.reply_text("Hello! I'm fernvenue's Summarize bot, forword the message to me and I will summarize it for you :)")
+        await update.message.reply_text("Hello! I'm Summarize bot, forword the message to me and I will summarize it for you :)")
     else:
-        await update.message.reply_text("Sorry, you are not allowed to use this bot, please contact @fernvenue_bot to get the permission.")
+        await update.message.reply_text("Sorry, you are not allowed to use this bot, please contact my owner to get the permission.")
     return
 
 async def handleHelpMessage(update, context):
     userId = update.message.from_user.id
     logging.info(f"User {userId} requested help.")
     if userId in ADMIN_USER_IDS or userId in ALLOWED_TELEGRAM_USER_IDS:
-        await update.message.reply_text("Hello! I'm fernvenue's Summarize bot, available commands:\n\n/help - Show this help message.\n/purge - Purge the cached content from the database.\n/summarize - Summarize the target message.\n\nOr you can just forward the message to me and I will summarize it for you :)")
+        await update.message.reply_text("Hello! I'm Summarize bot, available commands:\n\n/help - Show this help message.\n/purge - Purge the cached content from the database.\n/summarize - Summarize the target message.\n\nOr you can just forward the message to me and I will summarize it for you :)")
     else:
-        await update.message.reply_text("Sorry, you are not allowed to use this bot, please contact @fernvenue_bot to get the permission.")
+        await update.message.reply_text("Sorry, you are not allowed to use this bot, please contact my owner to get the permission.")
     return
 
 async def handleRequest(update, context):
@@ -88,7 +88,7 @@ async def handleRequest(update, context):
     logging.info(f"User {userId} sent a message.")
     if update.message.chat.type == "private":
         if userId not in ADMIN_USER_IDS and userId not in ALLOWED_TELEGRAM_USER_IDS:
-            await update.message.reply_text("Sorry, you are not allowed to use this bot, please contact @fernvenue_bot to get the permission.")
+            await update.message.reply_text("Sorry, you are not allowed to use this bot, please contact my owner to get the permission.")
             return
 
     # Message entities handler;
