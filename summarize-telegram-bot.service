@@ -1,0 +1,14 @@
+[Unit]
+Description=Summarize Telegram bot
+Documentation=https://github.com/fernvenue/summarize-telegram-bot
+After=network.target
+Wants=network.target
+
+[Service]
+Type=simple
+ExecStart=/etc/summarize-telegram-bot/venv/bin/python3 /etc/summarize-telegram-bot/bot.py
+WorkingDirectory=/etc/summarize-telegram-bot/
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
