@@ -2,6 +2,12 @@
 
 A Telegram bot that can summarize content from link.
 
+## TODO
+
+- [x] Cache control.
+- [ ] Multiple language support.
+- [ ] Multiple LLMs support.
+
 ## Usage
 
 ### Install
