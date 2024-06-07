@@ -61,3 +61,13 @@ Check [systemd service template](./summarize-telegram-bot.service) for the detai
 systemctl enable summarize-telegram-bot --now
 systemctl status summarize-telegram-bot
 ```
+
+## Commands
+
+You can just send commands list to BotFather to create commands, here's an example list:
+
+```
+help - Show this help message.
+purge - Purge the cached content from the database.
+summarize - Summarize the message you replied to or the message with a link.
+```
